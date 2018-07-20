@@ -1,11 +1,14 @@
-
+import os
+import random
 
 def main():
-    pass
+    document_path = os.path.join(os.getcwd(), "input", "target_sentences.txt")
+    sentence = choose_random_sentence(document_path)
 
-def draw_random_sentence():
 
-
+def choose_random_sentence(document):
+    lines = open(document).read().splitlines()
+    return random.choice(lines)
 
 
 
